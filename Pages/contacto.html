@@ -13,7 +13,7 @@
   <meta name="description" content="LeagueOfChampions">
   <meta name="author" content="MT">
   <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
-  <title>Intranet - Organigrama</title>
+  <title>Intranet - Soporte</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
   <header class="container-fluid">
     <img src="../images/L.png" alt="Logo de la pagina">
     <div class="container-fluid">
-      <h1> Sistema MT - IntraNET veinte23</h1>
+      <h1> League Of Champions</h1>
     </div>
   </header>
 
@@ -34,7 +34,7 @@
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Organigrama</li>
+            <li class="breadcrumb-item active" aria-current="page">contacto</li>
           </ol>
         </nav>
         <!-- NAV -->
@@ -44,31 +44,39 @@
               <a class="nav-link" href="../index.html">inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Pages/noticias.html">Noticias</a>
+              <a class="nav-link" href="../Pages/top.html">Top</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Pages/organigrama.html">Organigrama</a>
+              <a class="nav-link" href="../Pages/mid.html">Mid</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Pages/servicios.html">Servicios</a>
+              <a class="nav-link" href="../Pages/jg.html">Jungla</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Pages/soporte.html">Soporte</a>
+              <a class="nav-link" href="../Pages/bot.html">Bot</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Pages/contacto.html">Contacto</a>
           </ul>
         </nav>
       </div>
 
       <div class="cuerpo-main col-md-9 col-xl-10">
         <div class="p-4">
-          <h2>Organigrama de la institucion</h2>
+          <h2> Gracias por ponerse en contacto con soporte</h2>
+          <p> A travez de este formulario atenderemos su consulta lo más pronto posible</p>
         </div>
-        <figure class="p-4">
-          <h2>
-            Representacion gráfica, actualizado de la estructura jerarquica actual
-          </h2>
-          <img src="../images/organigrama/1.png" alt="organigrama_ejemplo">
-        </figure>
+        <div class="container-fluid contact-form-container">
+          <form class="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required="">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required="">
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required=""></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
       </div>
 
     </div>
