@@ -1,0 +1,177 @@
+// estilos generales para todos los elementos
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// le damos al html y al body altura 100% para poder aproximar un tamaño del header
+html, body, .contenedor {
+    height: 100%;
+    position: relative;
+}
+
+$background-oscuro: #292929; 
+$texto-blanco: #f9f9f9;
+$background-blanco: #f4f4f4;
+$info-text: #7e7e7e;
+$amarillo-claro: #eddc91;
+$dorado: #c4a15b;
+$azul-claro: #548CB4;
+
+
+
+body {
+    height: 100%;
+    background-image: url(./fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: $background-blanco;
+    margin-bottom: 40px;
+}
+
+.bg-light {
+    background-color: rgba(8, 142, 160, 0.527) !important;
+}
+
+.navbar-brand {
+    color: rgb(66, 233, 255) !important;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.navbar-toggler {
+    background-color: rgb(8, 142, 160) !important;
+}
+
+.nav-link {
+    color: rgb(66, 233, 255) !important;
+}
+
+.navbar-collapse{
+    background-color: rgba(8, 142, 160, 0.527) !important;
+}
+
+.contenedor {
+    // flex styles
+    display: flex;
+    flex-flow: column nowrap; 
+}
+.navbar-collapse {
+    z-index: 10;
+    background-color: $background-oscuro;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    flex-grow: 1; // con esto el main ocupara todo el espacio que no ocupen el header y footer
+    padding: 8px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.lineas-container {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); // este codigo hace que sea responsive.
+    //auto-fill ajusta automaticamente la cantidad de elementos en la linea
+    //minmax es una funcion que le asigna al elemento como valor minimo 15rem en este caso 
+    //y como maximo que ocupe todo el espacio libre
+    gap: 1rem;
+}
+// estilos a los elementos del grid, aplica a todos los carriles
+.linea {
+    background: linear-gradient(181deg, $amarillo-claro, $dorado);
+    justify-self: center;
+    background-size: 400% 400%;
+    outline: 1px solid $azul-claro; // outline unicamente para poder ver la caja
+}
+
+.linea a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        color: $azul-claro;
+    }
+}
+
+.img-container  {
+    width: 100%;
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.img-container h3 {
+    position: absolute;
+    color: $texto-blanco;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+.linea h3 {
+    position: absolute;
+}
+
+.linea p {
+    margin-left: 4px;
+}
+// fin del estilo de cada elemento del grid
+
+//container para centrar el video
+.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+// video para el fondo
+.video-background {
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+    margin: 4px;
+    height: auto;
+    padding: 4px;
+    outline: 1px solid $background-oscuro;
+}
+
+.contacto-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $dorado;
+    font-size: 2rem;
+    padding: .5rem;
+    outline: 2px solid $amarillo-claro;
+    border-radius: 10%;
+
+    &:hover {
+        transition: background-color .25s linear;
+        background-color: $azul-claro;
+        color: $amarillo-claro;
+        text-decoration: none;
+    }
+}
+
+footer {
+    background-color: $background-oscuro;
+    position: absolute;
+    bottom: auto;
+    color: $info-text;
+    text-align:start; // centramos el texto
+    min-height: 5%;
+    border: 2px solid black; // borde para poder ver los limites del footer
+}

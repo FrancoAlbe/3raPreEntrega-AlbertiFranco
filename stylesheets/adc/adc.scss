@@ -1,0 +1,129 @@
+// estilos generales para todos los elementos
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// le damos al html y al body altura 100% para poder aproximar un tamaño del header
+html, body, .contenedor {
+    height: 100%;
+}
+
+$background-oscuro: #292929; 
+$texto-blanco: #f9f9f9;
+$background-blanco: #f4f4f4;
+$info-text: #000000;
+$amarillo-claro: #eddc91;
+$dorado: #c4a15b;
+$azul-claro: #548CB4;
+
+header {                                                                                                                                                                                                                      
+    color: $info-text;
+    text-align: center; // centramos el texto
+    min-height: 10%; // altura minima 10% para simular un tamaño de header real
+}
+
+body {
+    height: 100%;
+    background-image: url(../index/fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: $background-blanco;
+}
+
+.bg-light {
+    background-color: rgba(8, 142, 160, 0.527) !important;
+}
+
+.navbar-brand {
+    color: rgb(66, 233, 255) !important;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.navbar-toggler {
+    background-color: rgb(8, 142, 160) !important;
+}
+
+.nav-link {
+    color: rgb(66, 233, 255) !important;
+}
+
+.navbar-collapse{
+    background-color: rgba(8, 142, 160, 0.527) !important;
+}
+
+.contenedor {
+    // flex styles
+    display: flex;
+    flex-flow: column nowrap; 
+}
+.navbar-collapse {
+    z-index: 10;
+    background-color: $background-oscuro;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    flex-grow: 1; // con esto el main ocupara todo el espacio que no ocupen el header y footer
+    padding: 8px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.skins-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+}
+
+.skins-container img {
+    width: 100%;
+}
+
+.skin-layout {
+    font-weight: bold;
+    background-color: #5466b4c0;
+    position: relative;
+}
+
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        opacity: 1;
+        
+    }
+}
+
+img{
+    border: 2.5px solid #54c6ce;
+    animation: aparecer 1.2s forwards linear;
+    opacity: 0;
+}
+
+footer {
+    background-color: rgba(5, 205, 212, 0.61);
+    position: absolute;
+    bottom: auto;
+    color: $info-text;
+    text-align:center; 
+    min-height: 5%;
+    border: 2px solid black; 
+}
